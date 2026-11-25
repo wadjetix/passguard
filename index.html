@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="اكتشف مدى قوة كلمة مرورك، وما الأنماط التي يستغلها المهاجم، ثم ولّد عبارة مرور قوية. كل ذلك داخل متصفحك.">
+<meta name="theme-color" content="#07080c">
+<title>فاحص قوة كلمات المرور | WADJETIX</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="https://wadjetix.github.io/"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="10" y1="0" x2="90" y2="100" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff1b8"/><stop offset=".5" stop-color="#e8b84a"/><stop offset="1" stop-color="#9a6d1c"/></linearGradient></defs><path d="M50 6 88.7 27.1V56.6C88.7 77.3 67.6 90.5 50 96.2 32.4 90.5 11.3 77.3 11.3 56.6V27.1Z" fill="none" stroke="url(#g)" stroke-width="6"/><path d="M26 52Q50 32 74 52Q50 70 26 52Z" fill="none" stroke="url(#g)" stroke-width="4"/><circle cx="50" cy="52" r="7" fill="url(#g)"/></svg><span>WADJETIX</span></a><a class="gh" href="https://github.com/wadjetix/passguard" rel="noopener noreferrer">GitHub</a></header>
+<main>
+<h1>فاحص قوة كلمات المرور</h1>
+<p class="lead">اكتشف مدى قوة كلمة مرورك، وما الأنماط التي يستغلها المهاجم، ثم ولّد عبارة مرور قوية. كل ذلك داخل متصفحك.</p>
+<section class="card">
+<label for="pw">اكتب كلمة المرور لفحصها</label>
+<input id="pw" type="password" autocomplete="off" spellcheck="false" placeholder="••••••••••••" dir="ltr">
+<div class="row"><button class="btn ghost" id="tog" type="button">إظهار</button><button class="btn" id="gen" type="button">توليد عبارة مرور قوية</button></div>
+<div class="meter"><i id="bar"></i></div>
+<div class="verdict" id="verdict">ابدأ بالكتابة</div>
+<div class="grid">
+<div class="kv"><b>الإنتروبي التقديرية</b><span id="ent">0 بت</span></div>
+<div class="kv"><b>زمن التخمين التقديري</b><span id="crack">-</span></div>
+<div class="kv"><b>الطول</b><span id="len">0</span></div>
+</div>
+<ul class="list" id="issues"></ul>
+</section>
+<section class="card" id="genbox" hidden><label>عبارة المرور المولَّدة</label><div class="mono big" id="out"></div><div class="row"><button class="btn ghost" id="copy" type="button">نسخ</button></div></section>
+<section class="card"><b>كيف يعمل الفحص؟</b><p>تكتشف الأداة الكلمات الشائعة، وتسلسلات لوحة المفاتيح، والأرقام المتتابعة، والتكرار، والسنوات، والاستبدالات المعروفة مثل a إلى @. ثم يقدّر عدد التخمينات اللازمة ويحوّله إلى زمن، بافتراض مهاجم يجرّب مئة مليار محاولة في الثانية على كلمة مرور مسرّبة.</p></section>
+<p class="note">يعمل كل شيء داخل متصفحك فقط. لا يُرسَل أي شيء إلى أي خادم، ولا تُحفَظ بياناتك.<br><span dir="ltr" class="bidi">Everything runs locally in your browser. Nothing is sent anywhere.</span></p>
+</main>
+<footer>WADJETIX | حارس عالمك الرقمي · MIT License</footer>
+<script src="app.js"></script>
+</body>
+</html>

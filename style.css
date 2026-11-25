@@ -1,0 +1,40 @@
+:root{--bg:#07080c;--panel:#0f1117;--line:#2a2415;--gold:#e8b84a;--gold2:#fff1b8;--gold3:#9a6d1c;--txt:#ece6d6;--mut:#a79f8a;--ok:#4cc38a;--warn:#f0b429;--bad:#ef5b5b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#1b1507 0,var(--bg) 60%);color:var(--txt);font:17px/1.8 "Segoe UI",Tahoma,"Noto Naskh Arabic","Noto Sans Arabic",system-ui,sans-serif;min-height:100vh}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;border-bottom:1px solid var(--line);background:rgba(7,8,12,.85);position:sticky;top:0;backdrop-filter:blur(8px);z-index:5}
+.brand{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:800;letter-spacing:.12em;text-decoration:none}
+.brand svg{width:34px;height:34px}
+header a.gh{color:var(--gold2);text-decoration:none;border:1px solid var(--gold3);padding:6px 16px;border-radius:99px;font-size:.9rem}
+main{max-width:860px;margin:0 auto;padding:40px 5vw 80px}
+h1{font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.4;margin:.2em 0;background:linear-gradient(90deg,var(--gold2),var(--gold),var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);margin:0 0 28px}
+.card{background:linear-gradient(180deg,#12141b,var(--panel));border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+label{display:block;color:var(--gold2);font-weight:700;margin-bottom:8px}
+input[type=text],input[type=password],input[type=url],textarea{width:100%;background:#07080c;border:1px solid var(--gold3);color:var(--txt);border-radius:12px;padding:14px 16px;font:inherit;direction:ltr;text-align:left}
+input:focus,textarea:focus,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn{background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,var(--gold3));color:#1a1204;border:0;border-radius:12px;padding:12px 24px;font:inherit;font-weight:800;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold3)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.meter{height:12px;background:#1a1710;border-radius:99px;overflow:hidden;margin:14px 0}
+.meter i{display:block;height:100%;width:0;background:var(--bad);transition:width .3s,background .3s}
+.verdict{font-size:1.4rem;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+.kv{background:#0a0b10;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kv b{display:block;color:var(--mut);font-size:.85rem;font-weight:600}
+ul.list{list-style:none;margin:10px 0 0;padding:0}
+ul.list li{padding:10px 14px;border-radius:10px;margin:6px 0;background:#0a0b10;border:1px solid var(--line)}
+ul.list li.bad{border-color:#5a2424}ul.list li.warn{border-color:#5a4a1a}ul.list li.ok{border-color:#1f4a37}
+.tag{display:inline-block;font-size:.75rem;padding:1px 10px;border-radius:99px;margin-inline-end:8px;font-weight:800}
+.tag.bad{background:var(--bad);color:#200}.tag.warn{background:var(--warn);color:#210}.tag.ok{background:var(--ok);color:#012}
+.note{color:var(--mut);font-size:.9rem;border-inline-start:3px solid var(--gold3);padding-inline-start:12px;margin-top:18px}
+.mono{direction:ltr;unicode-bidi:plaintext;font-family:ui-monospace,Consolas,monospace;word-break:break-all}
+footer{text-align:center;color:var(--mut);padding:30px 5vw;border-top:1px solid var(--line);font-size:.9rem}
+.cat{margin-top:26px}.cat h2{color:var(--gold);font-size:1.2rem;margin:0 0 8px}
+.item{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;margin:8px 0;background:#0a0b10;border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.item input{width:22px;height:22px;accent-color:var(--gold);flex:none;margin-top:6px}
+.item small{display:block;color:var(--mut)}
+.ring{--p:0;width:130px;height:130px;border-radius:50%;background:conic-gradient(var(--gold) calc(var(--p)*1%),#1a1710 0);display:grid;place-items:center;flex:none}
+.ring span{width:104px;height:104px;border-radius:50%;background:var(--panel);display:grid;place-items:center;font-size:1.8rem;font-weight:800;color:var(--gold2)}
+@media(max-width:560px){body{font-size:16px}.card{padding:18px}}
+.bidi{unicode-bidi:plaintext}.row.top{margin:0;gap:24px}.lead.sub{margin:0}.mono.big{font-size:1.3rem}[hidden]{display:none!important}
+#score{direction:ltr;display:inline-block}
